@@ -1,0 +1,82 @@
+
+body {
+    background-color : #B35A20;
+}
+
+header {
+    background-color : #E8891D; 
+    border-top-left-radius: 10px; 
+    border-top-right-radius: 10px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    COLOR: black; 
+    font-family:Verdana, Geneva; 
+    FONT-SIZE: 10PT;
+}
+
+p {
+    COLOR: black; 
+    font-family:Verdana, Geneva; 
+    FONT-SIZE: 10PT; 
+}
+
+main {
+    background-color: #BFD5C9; 
+    border-radius: 10px;
+}
+
+aside {
+    background-color: #006e48; 
+    border-radius: 10px;
+}
+
+footer {
+    background-color: #B35A20; 
+    border-radius: 10px;
+}
+
+nav li {
+    background-color : #B35A20;
+    border-radius: 2px; 
+    border-style: solid; 
+    accent-color: #05A3A4;
+}
+
+nav li a {
+    color: black; 
+    text-align: center; 
+    text-decoration: none;
+}
+
+Nav li :hover {
+    background-color: #05A3A4;
+}
+
+.active {
+    background-color: #BFD5C9;
+}
+
+table {
+    font-family:Verdana, Geneva;
+    border-collapse: collapse;
+}
+
+table td, table th {
+    border-radius: 2px; 
+    border-style: solid; 
+    color: black;
+}
+
+table tr:nth-child(even) {
+    background-color: white;
+}
+
+Table tr:hover {
+    background-color: #B35A20;
+}
+
+table th {
+    background-color: #BFD5C9;
+    color: black;
+}
