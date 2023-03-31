@@ -1,3 +1,13 @@
+<!--
+Threat Model
+Threat Source: External
+Threat Agent: Human
+Threat Intention: intentional
+Threat Motivation: to smear our legends images
+Threat Impact: chainging images to something else, possibly adding something else insted of images.
+Threat Mitigation: an alert that images have been changed,images must be verified before they are able to change, a protection to the images where if an image can nopt change if they are not verified.
+-->
+
 <html>
     <head>
 
@@ -5,92 +15,95 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
 
 
-
         <title>Football Is The Best</title>
         <link rel="stylesheet" href="css/main.css">
         <img id = "logo" src="images/Football_Pallo_valmiina-cropped.jpg" />
     </head>
 
-    <Body> 
+    <body> 
         <header> 
-            
             <h1 
                 style="FONT-SIZE: 32PT"> 
                 Football Is The Superior Sport 
             </h1>
-
         </header>
 
         <nav>
-
             <ul> 
                 <li class = "active"> <a href="index.html"> Home Page </a> </li>
-                <li class = "active"> <a href="contact_us.html"> Contact Us</a> </li>
-                <li class = "active"> <a href="current_members.html"> Current Members</a> </li>
-                <li class = "active"> <a href="event_calendar.html"> Events</a> </li>
-                <li class = "active"> <a href="Img_gallery.html"> Image Gallery</a> </li>
+                <li  > <a href="contact_us.html"> Contact Us</a> </li>
+                <li  > <a href="current_members.html"> Current Members</a> </li>
+                <li  > <a href="event_calendar.html"> Events</a> </li>
+                <li  > <a href="Img_gallery.html"> Image Gallery</a> </li>
+                <li  > <a href="top_scorers.html"> Top Goal Scorers</a> </li>
             </ul>
-            
         </nav>
 
         <main>
-
             <div id="img-gallery" class="container">
+                <div class="row" >
 
-                <div class="row">
+                    <div class="col-sm" id="hello1">
+                        <img src="images/assualt.jfif" onmouseover="highlight(this)" onmouseout="delight(this)"  class="gallery-img"/>
+                    </div>
 
-                    <div class="col-sm">
-                        <img src="images/assualt.jfif" class="gallery-img"/>
+                    <div class="col-sm" >
+                        <img src="images/maradona.jfif" onmouseover="highlight(this)" onmouseout="delight(this)" class="gallery-img"/>
                     </div>
 
                     <div class="col-sm">
-                        <img src="images/maradona.jfif" class="gallery-img"/>
+                        <img src="images/ronaldo.jfif" class="gallery-img"onmouseover="highlight(this)" onmouseout="delight(this)" />
                     </div>
-
-                    <div class="col-sm">
-                        <img src="images/ronaldo.jfif" class="gallery-img"/>
-                    </div>
-
                 </div>
 
                 <div class="row">
 
                     <div class="col-sm">
-                        <img src="images/hal and van.jfif" class="gallery-img"/>
+                        <img src="images/hal and van.jfif" class="gallery-img"onmouseover="highlight(this)" onmouseout="delight(this)" />
                     </div>
 
                     <div class="col-sm">
-                        <img src="images/psg.jfif" class="gallery-img"/>
+                        <img src="images/psg.jfif" class="gallery-img"onmouseover="highlight(this)" onmouseout="delight(this)" />
                     </div>
 
                     <div class="col-sm">
-                        <img src="images/sterling.jfif" class="gallery-img"/>
+                        <img src="images/sterling.jfif" class="gallery-img"onmouseover="highlight(this)" onmouseout="delight(this)" />
                     </div>
-
                 </div>
    
                 <div class="row">
 
                     <div class="col-sm">
-                        <img src="images/rona and ney.jfif" class="gallery-img"/>
+                        <img src="images/rona and ney.jfif" class="gallery-img"onmouseover="highlight(this)" onmouseout="delight(this)" />
                     </div>
 
                     <div class="col-sm">
-                        <img src="images/ney and mab.jfif" class="gallery-img"/>
+                        <img src="images/ney and mab.jfif" class="gallery-img"onmouseover="highlight(this)" onmouseout="delight(this)" />
                     </div>
 
                     <div class="col-sm">
-                        <img src="images/messi.jfif" class="gallery-img"/>
+                        <img src="images/messi.jfif" class="gallery-img"onmouseover="highlight(this)" onmouseout="delight(this)" />
                     </div>
-
                 </div>
-
             </div>
-
         </main>
 
         <aside> </aside>
 
-        <footer> </footer>
-    </Body>
+        <footer> 
+            <strong>Copyright Mario, Year 2023</strong>
+        </footer>
+
+        <script>
+
+            function highlight(x) {
+                x.style="border: solid black 2px; backgroundColor = none;"
+                x.style.filter = 'blur(0)'
+            }
+            function delight(x) {
+                x.style = "border: none; backgroundColor = grey;"
+            }
+        </script>
+    </body>
 </html>
+

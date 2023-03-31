@@ -1,10 +1,8 @@
 <html>
-
     <head>
 
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
-
 
 
         <title>Football Is The Best</title>
@@ -12,33 +10,27 @@
         <img id = "logo" src="images/Football_Pallo_valmiina-cropped.jpg" />
     </head>
 
-    <Body> 
+    <body> 
         <header> 
-
             <h1 
                 style="FONT-SIZE: 32PT"> 
                 Football Is The Superior Sport 
             </h1>
-
-
         </header>
 
         <nav> 
-
             <ul> 
                 <li class = "active"> <a href="index.html"> Home Page </a> </li>
-                <li class = "active"> <a href="contact_us.html"> Contact Us</a> </li>
-                <li class = "active"> <a href="current_members.html"> Current Members</a> </li>
-                <li class = "active"> <a href="event_calendar.html"> Events</a> </li>
-                <li class = "active"> <a href="Img_gallery.html"> Image Gallery</a> </li>
+                <li  > <a href="contact_us.html"> Contact Us</a> </li>
+                <li  > <a href="current_members.html"> Current Members</a> </li>
+                <li  > <a href="event_calendar.html"> Events</a> </li>
+                <li  > <a href="Img_gallery.html"> Image Gallery</a> </li>
+                <li  > <a href="top_scorers.html"> Top Goal Scorers</a> </li>
             </ul>
-
         </nav>
 
         <main> 
-
             <div> 
-
                 <table> 
                 
                     <tr>
@@ -66,7 +58,7 @@
                     </tr>
 
                     <tr> 
-                        <th>Week6</th><td></td><td></td><td></td><td></td><td></td><td>game dy</td><td></td>
+                        <th>Week6</th><td></td><td></td><td></td><td></td><td></td><td>game day</td><td></td>
                     </tr>
 
                     <tr> 
@@ -96,15 +88,43 @@
                     <tr> 
                         <th>Week13</th><td></td><td></td><td></td><td>game</td><td></td><td></td><td></td>
                     </tr>
-                
                 </table>
-
             </div>
+
+            <form id="event">
+                <tag style="FONT-SIZE: 16PT" > Want to recommend an event? Tell us below!</tag>
+                <br>
+                <input type="text" name="event_title" value="" placeholder="event"/> <br/>
+
+                <input type="text" name="event_date" value="" placeholder="date"/> <br/>
+
+                <button type="button" onclick=submit_event()>Submit</button>
+            </form>
 
         </main>
 
         <aside> </aside>
 
-        <footer> </footer>
-    </Body>
+        <footer> 
+            <strong>Copyright Mario, Year 2023</strong>
+        </footer>
+
+        <script>
+            function submit_event() {
+                var title = document.forms["event"]["event_title"].value;
+                var date = document.forms["event"]["event_date"].value;
+                if (title == "") {
+                    alert("An event must have a title!");
+                }
+                else {
+                    if (date.length == 0) {
+                        alert("An event must have a date!");
+                }   
+                else {
+                    alert("Event submitted! The society will contact you soon!");
+                }
+            }
+        }
+        </script>
+    </body>
 </html>

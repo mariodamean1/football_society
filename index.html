@@ -1,118 +1,163 @@
-<html>
+<!--
+Threat Model
+Threat Source: External
+Threat Agent: Human
+Threat Intention: Intentional
+Threat Motivation: harming people that have logged in
+Threat Impact: identity fraud, might change the person login username or password, might take advantge of credit cards or phone numbers if there are any
+Threat Mitigation: Login validation, 2 factor authenticator app, 
+-->
 
+<!DOCTYPE html>
 
-
+<html lang="en-GB">
     <head>
-
+        <meta charset=UTF-8>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
 
         <link rel="stylesheet" href="css/main.css">
-
-        <title>
-            Football
-        </title>
-
-        <img id = "logo" src="images/Football_Pallo_valmiina-cropped.jpg" />
-
         
     </head>
 
-    <Body> 
+    <body>
+        <script>
+            var counter = 2;
+
+            function log(){
+                if(counter % 2 == 0){
+                    alert('You have been logged in!');
+                }
+                else {
+                    alert('You have been logged out!');
+                }
+                counter += 1;
+            }
+        </script>
+
         <header> 
-            
+
+            <title>
+                Football
+            </title>
+    
+            <img id = "logo" alt="logo_image" src="images/Football_Pallo_valmiina-cropped.jpg" >
+    
             <h1 
                 style="FONT-SIZE: 32PT"> 
                 Football Is The Superior Sport 
             </h1>
-        
+
+            <form class="row pull-right">
+
+                <fieldset id="login">
+                    <input type="text" name="email" value="" placeholder="email"> <br>
+
+                    <input type="text" name="password" value="" placeholder="password"> <br>
+
+                    <button type="button" onclick="log()">Login</button>
+                </fieldset>
+            </form>
         </header>
 
         <nav> 
-
             <div>
-
                 <ul> 
                     <li class = "active"> <a href="index.html"> Home Page </a> </li>
                     <li  > <a href="contact_us.html"> Contact Us</a> </li>
                     <li  > <a href="current_members.html"> Current Members</a> </li>
                     <li  > <a href="event_calendar.html"> Events</a> </li>
                     <li  > <a href="Img_gallery.html"> Image Gallery</a> </li>
+                    <li  > <a href="top_scorers.html"> Top Goal Scorers</a> </li>
                 </ul>
-    
-                
             </div>
-
         </nav>
 
         <main> 
+                <div id="home-carousel" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-indicators">
+                            <button type="button" data-bs-target="#carousel-item" data-bs-slide-to="0" class="active"></button>
+                            <button type="button" data-bs-target="#carousel-item" data-bs-slide-to="1"> </button>
+                            <button type="button" data-bs-target="#carousel-item" data-bs-slide-to="2"> </button>
+                        </div>
 
-
-            <div id="home-carousel" class="carousel slide" data-bs-ride="carousel">
-
-                <div class="carousel-inner">
-
-                    <!-- item 1-->
-                    <div class="carousel-item active">
-                        <img class="d-block w-100" src="images/cristiano-ronaldo-portugal-5-june-2022.jpg"> 
+                        <!-- item 1-->
+                        <div class="carousel-item active">
+                            <img class="d-block w-100" alt="image" src="images/cristiano-ronaldo-portugal-5-june-2022.jpg"> 
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5 class="titlequote"> RonalGoat 🐐🐐🐐</h5>
+                                <p class="quote">Ronaldo is the best football player ever</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img class="d-block w-100" alt="image" src="images/KWFB4SNZIVMBZBMO5FCAAIMEOU.jpg"> 
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5 class="titlequote"> Pessi 🥤</h5>
+                                <p class="quote">Pessi is the second best player ever(and the most protected player ever)</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img class="d-block w-100" alt="image" src="images/brazil-neymar-celebrates-extra-time-goal-croatia-world-cup-dec22.jpg"> 
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5 class="titlequote"> Neymar</h5>
+                                <p class="quote"> Currently in the hospital for injury </p>
+                            </div>
+                        </div>
                     </div>
-
-                    <div class="carousel-item ">
-                        <img class="d-block w-100" src="images/KWFB4SNZIVMBZBMO5FCAAIMEOU.jpg"> 
-                    </div>
-
-                    <div class="carousel-item ">
-                        <img class="d-block w-100" src="images/brazil-neymar-celebrates-extra-time-goal-croatia-world-cup-dec22.jpg"> 
-                    </div>
-
+                    <a class="carousel-control-prev" href="#home-carousel" role="button" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    </a>
+                    <a class="carousel-control-next" href="#home-carousel" role="button" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    </a>
                 </div>
-
-
-            </div>
             
 
             <div>
-                <p>
-                    welcome
+                <p style="FONT-SIZE: 20PT">
+                    Welcome to the Football Society
                 </p>
             </div>
-            
+        
             <div> 
 
-                <h2> 
-                    If you love football welcome!
-                </h2> 
-
-                <h3 
-                    style="FONT-SIZE: 20PT" >
-                    Welcome to the Football Society
-                </h3>
-
-
-                <p 
-                    style="FONT-SIZE: 10PT">
+                <p style="FONT-SIZE: 10PT">
                     Football Is The Superior Sport is a society that just shows how much better football is. 
-                </p> 
+                </p>
 
-                <h4 
-                    style="FONT-SIZE: 10PT"> 
+                <h4 style="FONT-SIZE: 10PT"> 
                     Latest News 
                 </h4>
-        
             </div> 
-        
         </main>
 
-        <aside></aside>
+        <aside>
+            <div>
+                <img id="articleImg" alt="image" src="images/ronaldo_news.jfif"> 
+            </div>
+
+            <div class="article">
+                <h5 style="FONT-SIZE: 17PT">
+                    Ronaldo wins the goat dabate!!!😱😱😱
+                </h5>
+                
+                <h6 style="FONT-SIZE: 12PT">
+                    Pessi has stated that he will retire by the end of the year!! 🤯🤯🤯
+                    Because he's been ghosting all of his PSG games.
+
+
+                    
+                </h6>
+            </div>
+        </aside>
 
         <footer> 
-
-            <p> 
-                Copyright Mario
-            </p>
-
+                <p> 
+                    <strong>Copyright Mario, Year 2023</strong>
+                </p>
         </footer>
-
-    </Body>
-
+    </body>
 </html>
+
+
